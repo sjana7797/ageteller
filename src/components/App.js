@@ -11,6 +11,7 @@ function App() {
   const [inputDate, setInputDate] = useState("");
   const [age, setAge] = useState("");
   const [showStat, setShowStat] = useState(false);
+  const today = `${moment().format("Do MMMM YYYY")}`;
   const printBirthDay = () => {
     let date1 = moment(inputDate);
     let date2 = moment();
@@ -21,6 +22,11 @@ function App() {
   return (
     <Fragment>
       <h1 className="mt-3 text-center display-1">Age Teller</h1>
+      <h3 c className="mt-3 text-center display-6">
+        <em>
+          Today's Date is <span className="text-primary">{`${today}`}</span>
+        </em>
+      </h3>
       <div className="p-3 text-center mt-3">
         <h2 className="text-center">Input your Birthday!</h2>
         <Form className="d-inline-flex p-1 mb-3">
@@ -36,11 +42,7 @@ function App() {
           </Button>
         </Form>
 
-        {showStat ? (
-          <DateStats today={`${moment().format("Do MMMM YYYY")}`} age={age} />
-        ) : (
-          ""
-        )}
+        {showStat ? <DateStats age={age} /> : ""}
       </div>
     </Fragment>
   );
