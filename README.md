@@ -13,6 +13,10 @@ Age Teller is a Simple React Based App that is used to display age from today's 
 
 ---
 
+## View Site
+
+[Age Teller](https://ageteller-sjana7797.netlify.app/)
+
 ## Contribution
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
